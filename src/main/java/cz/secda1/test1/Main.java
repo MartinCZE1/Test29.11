@@ -3,6 +3,7 @@ package cz.secda1.test1;
 
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Main {
 

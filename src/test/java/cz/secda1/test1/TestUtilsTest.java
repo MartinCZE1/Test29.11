@@ -157,38 +157,28 @@ class TestUtilsTest {
         assertTrue(map.keySet().containsAll(List.of(List.of(),
                 List.of(LunchDBService.eggs),
                 List.of(LunchDBService.milk),
-                List.of(LunchDBService.wheat,LunchDBService.milk),
-                List.of(LunchDBService.wheat,LunchDBService.eggs),
-                List.of(LunchDBService.milk,LunchDBService.eggs)
-                )));
+                List.of(LunchDBService.wheat, LunchDBService.milk),
+                List.of(LunchDBService.wheat, LunchDBService.eggs),
+                List.of(LunchDBService.milk, LunchDBService.eggs)
+        )));
 
-        for (LunchItem item: map.get(List.of(LunchDBService.milk,LunchDBService.eggs))) {
+        for (LunchItem item : map.get(List.of(LunchDBService.milk, LunchDBService.eggs))) {
             System.out.println("allMeals.get(" + allMeals.indexOf(item) + ")");
         }
-        assertEquals(map.get(List.of()),List.of(allMeals.get(4), allMeals.get(8),allMeals.get(17)));
+        assertEquals(map.get(List.of()), List.of(allMeals.get(4), allMeals.get(8), allMeals.get(17)));
 
-        assertEquals(map.get(List.of(LunchDBService.eggs)),List.of(allMeals.get(25)));
+        assertEquals(map.get(List.of(LunchDBService.eggs)), List.of(allMeals.get(25)));
 
-        assertEquals(map.get(List.of(LunchDBService.milk)),List.of(allMeals.get(3), allMeals.get(5), allMeals.get(7),
+        assertEquals(map.get(List.of(LunchDBService.milk)), List.of(allMeals.get(3), allMeals.get(5), allMeals.get(7),
                 allMeals.get(9), allMeals.get(11), allMeals.get(15), allMeals.get(19), allMeals.get(22), allMeals.get(23),
                 allMeals.get(26), allMeals.get(27), allMeals.get(28), allMeals.get(29), allMeals.get(31)));
 
-        assertEquals(map.get(List.of(LunchDBService.wheat, LunchDBService.milk)),List.of(allMeals.get(0), allMeals.get(1),
+        assertEquals(map.get(List.of(LunchDBService.wheat, LunchDBService.milk)), List.of(allMeals.get(0), allMeals.get(1),
                 allMeals.get(2), allMeals.get(6), allMeals.get(10), allMeals.get(12), allMeals.get(14), allMeals.get(16),
                 allMeals.get(20), allMeals.get(21), allMeals.get(30)));
 
-        assertEquals(map.get(List.of(LunchDBService.wheat,LunchDBService.eggs)),List.of(allMeals.get(24)));
+        assertEquals(map.get(List.of(LunchDBService.wheat, LunchDBService.eggs)), List.of(allMeals.get(24)));
 
-        assertEquals(map.get(List.of(LunchDBService.milk,LunchDBService.eggs)),List.of(allMeals.get(13),allMeals.get(18)));
-
-
-
-
-
-
-
+        assertEquals(map.get(List.of(LunchDBService.milk, LunchDBService.eggs)), List.of(allMeals.get(13), allMeals.get(18)));
     }
-
-
-
 }
